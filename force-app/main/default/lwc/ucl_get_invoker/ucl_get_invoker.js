@@ -6,7 +6,7 @@ export default class ButtonBasic extends LightningElement {
 
     handleClick(event) {
         invoke_get_call({})
-            .then(success => {
+            .then(result => {
                 console.log('success: ', success)
                 const evt = new ShowToastEvent({
                     title: 'Toast Success',
