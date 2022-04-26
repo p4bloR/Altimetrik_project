@@ -1,5 +1,6 @@
 trigger ucl_LegalAdvisorStatusTrigger on Legal_advisor__c (before insert, before update) {
-	
+	// Trigger makes sure Advisors with status of Disabled 
+    // can only be added to reflect a status change
     Map<String, Legal_advisor__c> disabled_advisors = new Map<String, Legal_advisor__c>();
     
     for (Legal_advisor__c l: Trigger.new){
